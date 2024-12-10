@@ -23,10 +23,9 @@
 </div>
 
 <p align="center">
-    <a href="#📛-notice">Notice</a> •
-    <a href="#💻-installation">Installation</a> •
-    <a href="#💡-credits">Credits</a> •
-    <a href="#⚒️-changelog">Changelog</a> •
+    <a href="#-notice">Notice</a> •
+    <a href="#-installation">Installation</a> •
+    <a href="#-usage">Usage</a> •
     <a href="https://docs.neohertz.dev/docs/crate/about">Documentation</a>
 </p>
 
@@ -37,13 +36,18 @@
 > [!CAUTION] 
 > This package is still in **early beta**, expect breaking changes
 
-# 📦 Dependancies
+# 💻 Installation
+
+###  Dependancies
 
 ```bash
-npm i @rbxts/crate @rbxts/react
+@rbxts/crate@1.0.0
+@rbxts/react@^17.2.3
 ```
 
-# 💻 Installation
+
+### Install
+To install crate, run one of the following commands in your project's directory.
 
 ```bash
 npm i @rbxts/crate-react
@@ -57,8 +61,8 @@ Lets assume we have the following crate.
 
 ```ts
 export const sharedCrate = new Crate({
-	coins: 0,
-	xp: 0,
+  coins: 0,
+  xp: 0,
 });
 ```
 
@@ -68,17 +72,17 @@ To use this crate with react, we can simply use the provided `useCrate()` hook.
 import { sharedCrate } from "./example/path";
 
 export function MyCrateComponent() {
-	const coins = useCrate(sharedCrate, (state) => state.coins);
-	const xp = useCrate(sharedCrate, (state) => state.xp);
+  const coins = useCrate(sharedCrate, (state) => state.coins);
+  const xp = useCrate(sharedCrate, (state) => state.xp);
 
-	useEffect(() => {
-		print(`XP updated to ${xp}!`);
-	}, [xp]);
+  useEffect(() => {
+    print(`XP updated to ${xp}!`);
+  }, [xp]);
 
-	return <textlabel 
-		Size={UDim2.fromOffset(200, 50)} 
-		Text={`${coins}`} 
-	/>;
+  return <textlabel 
+    Size={UDim2.fromOffset(200, 50)} 
+    Text={`${coins}`} 
+  />;
 }
 ```
 
@@ -90,12 +94,12 @@ This library provides a hook for using the state as a binding if you prefer.
 import { sharedCrate } from "./example/path";
 
 export function MyCrateComponent() {
-	const coins = useCrateBinding(sharedCrate, (state) => state.coins);
+  const coins = useCrateBinding(sharedCrate, (state) => state.coins);
 
-	return <textlabel 
-		Size={UDim2.fromOffset(200, 50)} 
-		Text={coins.map((v) => `${v}`)} 
-	/>;
+  return <textlabel 
+    Size={UDim2.fromOffset(200, 50)} 
+    Text={coins.map((v) => `${v}`)} 
+  />;
 }
 ```
 
