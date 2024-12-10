@@ -1,7 +1,7 @@
 import useCrate from "./hooks/useCrate";
 import useCrateBinding from "./hooks/useCrateBinding";
 
-export default {
+export = {
 	useCrate,
 	useCrateBinding,
 };

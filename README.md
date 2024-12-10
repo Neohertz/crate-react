@@ -4,7 +4,7 @@
 </div>
 
 <h1 align="center">
-	Crate React
+	React Crate
 </h1>
 
 <h4 align="center">
