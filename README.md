@@ -1,5 +1,5 @@
 <div align="center">
-    <a href="https://github.com/Neohertz/crate-react"><img width="150" height="150" src="./docs/images/crate-react-logo.png" alt="Crate"></a>
+    <a href="https://github.com/Neohertz/react-crate"><img width="150" height="150" src="./docs/images/react-crate-logo.png" alt="Crate"></a>
 	
 </div>
 
@@ -50,9 +50,9 @@
 To install crate, run one of the following commands in your project's directory.
 
 ```bash
-npm i @rbxts/crate-react
-yarn add @rbxts/crate-react
-pnpm add @rbxts/crate-react
+npm i @rbxts/react-crate
+yarn add @rbxts/react-crate
+pnpm add @rbxts/react-crate
 ```
 
 # 💫 Usage
@@ -60,6 +60,8 @@ pnpm add @rbxts/crate-react
 Lets assume we have the following crate.
 
 ```ts
+import { Crate } from "@rbxts/crate"
+
 export const sharedCrate = new Crate({
   coins: 0,
   xp: 0,
@@ -70,6 +72,7 @@ To use this crate with react, we can simply use the provided `useCrate()` hook.
 
 ```tsx
 import { sharedCrate } from "./example/path";
+import { useCrate } from "@rbxts/react-crate";
 
 export function MyCrateComponent() {
   const coins = useCrate(sharedCrate, (state) => state.coins);
@@ -79,10 +82,12 @@ export function MyCrateComponent() {
     print(`XP updated to ${xp}!`);
   }, [xp]);
 
-  return <textlabel 
-    Size={UDim2.fromOffset(200, 50)} 
-    Text={`${coins}`} 
-  />;
+  return (
+      <textlabel 
+        Size={UDim2.fromOffset(200, 50)} 
+        Text={`${coins}`} 
+      />
+    )
 }
 ```
 
@@ -92,14 +97,17 @@ This library provides a hook for using the state as a binding if you prefer.
 
 ```tsx
 import { sharedCrate } from "./example/path";
+import { useCrateBinding } from "@rbxts/react-crate";
 
 export function MyCrateComponent() {
   const coins = useCrateBinding(sharedCrate, (state) => state.coins);
 
-  return <textlabel 
-    Size={UDim2.fromOffset(200, 50)} 
-    Text={coins.map((v) => `${v}`)} 
-  />;
+  return (
+      <textlabel 
+        Size={UDim2.fromOffset(200, 50)} 
+        Text={coins.map((value) => `${value}`)} 
+      />
+    )
 }
 ```
 
@@ -109,13 +117,13 @@ This software uses the following:
 
 -   Emojis were taken from [here](https://emojipedia.org/)
 
-[downloads-shield]: https://img.shields.io/npm/d18m/%40rbxts%2Fcrate-react?style=for-the-badge
-[downloads-url]: https://www.npmjs.com/package/@rbxts/crate-react
-[contributors-shield]: https://img.shields.io/github/contributors/neohertz/crate-react?style=for-the-badge
-[contributors-url]: https://github.com/Neohertz/crate-react/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/neohertz/crate-react?style=for-the-badge
-[stars-url]: https://github.com/Neohertz/crate-react/stargazers
-[issues-shield]: https://img.shields.io/github/issues/neohertz/crate-react?style=for-the-badge
-[issues-url]: https://github.com/Neohertz/crate-react/issues
-[license-shield]: https://img.shields.io/github/license/neohertz/crate-react?style=for-the-badge
-[license-url]: https://github.com/Neohertz/crate-react/blob/master/LICENSE
+[downloads-shield]: https://img.shields.io/npm/d18m/%40rbxts%2Freact-crate?style=for-the-badge
+[downloads-url]: https://www.npmjs.com/package/@rbxts/react-crate
+[contributors-shield]: https://img.shields.io/github/contributors/neohertz/react-crate?style=for-the-badge
+[contributors-url]: https://github.com/Neohertz/react-crate/graphs/contributors
+[stars-shield]: https://img.shields.io/github/stars/neohertz/react-crate?style=for-the-badge
+[stars-url]: https://github.com/Neohertz/react-crate/stargazers
+[issues-shield]: https://img.shields.io/github/issues/neohertz/react-crate?style=for-the-badge
+[issues-url]: https://github.com/Neohertz/react-crate/issues
+[license-shield]: https://img.shields.io/github/license/neohertz/react-crate?style=for-the-badge
+[license-url]: https://github.com/Neohertz/react-crate/blob/master/LICENSE
