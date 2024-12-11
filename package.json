@@ -1,6 +1,6 @@
 {
 	"name": "@rbxts/react-crate",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A hook library to integrate @rbxts/crate with react-lua.",
 	"repository": "https://github.com/Neohertz/crate",
 	"main": "out/init.lua",
@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@rbxts/compiler-types": "^2.3.0-types.1",
-		"@rbxts/crate": "^1.0.0",
+		"@rbxts/crate": "^1.0.1",
 		"@rbxts/react": "^17.2.3",
 		"@rbxts/types": "^1.0.780",
 		"@typescript-eslint/eslint-plugin": "^7.13.0",

@@ -26,7 +26,7 @@
     <a href="#-notice">Notice</a> •
     <a href="#-installation">Installation</a> •
     <a href="#-usage">Usage</a> •
-    <a href="https://docs.neohertz.dev/docs/crate/about">Documentation</a>
+    <a href="https://docs.neohertz.dev/docs/crate/about#%EF%B8%8F-react-integration">Documentation</a>
 </p>
 
 ---
@@ -41,7 +41,7 @@
 ###  Dependancies
 
 ```bash
-@rbxts/crate@1.0.0
+@rbxts/crate@^1.0.1
 @rbxts/react@^17.2.3
 ```
 
