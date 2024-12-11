@@ -1,7 +1,7 @@
 {
 	"name": "@rbxts/react-crate",
 	"version": "1.0.0",
-	"description": "A library for integrating react with crate, a tiny state manager for roblox-ts.",
+	"description": "A hook library to integrate @rbxts/crate with react-lua.",
 	"repository": "https://github.com/Neohertz/crate",
 	"main": "out/init.lua",
 	"scripts": {
@@ -34,7 +34,7 @@
 		"typescript": "^5.4.5"
 	},
 	"dependencies": {
-		"@rbxts/crate": "file:../crate-main/rbxts-crate-1.0.0.tgz",
+		"@rbxts/crate": "^1.0.0",
 		"@rbxts/react": "^17.2.3",
 		"@rbxts/sift": "^0.0.9"
 	}
